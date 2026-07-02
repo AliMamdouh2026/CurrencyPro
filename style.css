@@ -5,25 +5,44 @@ box-sizing:border-box;
 font-family:Arial,sans-serif;
 }
 
+:root{
+--bg:#f5f7fb;
+--card:#ffffff;
+--text:#222;
+--primary:#2563eb;
+--border:#d9d9d9;
+--shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+body.dark{
+--bg:#0f172a;
+--card:#1e293b;
+--text:#ffffff;
+--primary:#3b82f6;
+--border:#334155;
+--shadow:0 10px 25px rgba(0,0,0,.35);
+}
+
 body{
-background:#f5f7fb;
-color:#222;
-min-height:100vh;
+background:var(--bg);
+color:var(--text);
+transition:.3s;
 }
 
 #app{
 max-width:480px;
 margin:auto;
 min-height:100vh;
-background:#fff;
-box-shadow:0 0 20px rgba(0,0,0,.08);
+background:var(--bg);
+transition:.3s;
 }
 
 .header{
-background:#2563eb;
+background:var(--primary);
 color:#fff;
-padding:25px 20px;
+padding:25px;
 text-align:center;
+border-radius:0 0 25px 25px;
 }
 
 .header h1{
@@ -31,35 +50,86 @@ font-size:32px;
 margin-bottom:8px;
 }
 
-.header p{
-opacity:.9;
-font-size:16px;
-}
-
-#converter{
-padding:20px;
-}
-
 .card{
-background:#fff;
-border-radius:18px;
+background:var(--card);
+margin:20px;
 padding:20px;
-box-shadow:0 8px 25px rgba(0,0,0,.08);
-margin-top:20px;
+border-radius:20px;
+box-shadow:var(--shadow);
+transition:.3s;
+}
+
+label{
+display:block;
+margin:15px 0 8px;
+font-weight:bold;
+}
+
+input,
+select{
+width:100%;
+padding:14px;
+font-size:18px;
+border:1px solid var(--border);
+border-radius:12px;
+background:var(--card);
+color:var(--text);
+outline:none;
+transition:.3s;
 }
 
 button{
-background:#2563eb;
+width:100%;
+padding:15px;
+margin-top:15px;
+background:var(--primary);
 color:#fff;
 border:none;
 border-radius:12px;
-padding:14px;
 font-size:18px;
+font-weight:bold;
 cursor:pointer;
-width:100%;
-transition:.3s;
+transition:.25s;
+}
+
+button:hover{
+opacity:.9;
 }
 
 button:active{
 transform:scale(.98);
+}
+
+#resultCard{
+margin-top:25px;
+text-align:center;
+}
+
+#result{
+font-size:34px;
+margin:15px 0;
+font-weight:bold;
+word-break:break-word;
+}
+
+#updated{
+font-size:14px;
+opacity:.8;
+}
+
+@media(max-width:480px){
+
+.header h1{
+font-size:28px;
+}
+
+.card{
+margin:12px;
+padding:16px;
+}
+
+#result{
+font-size:28px;
+}
+
 }
