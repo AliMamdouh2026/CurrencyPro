@@ -54,8 +54,18 @@ async function convert() {
 
     const total = (amount * rate).toFixed(2);
 
-    result.textContent =
-        `${amount} ${from} = ${total} ${to}`;
+    result.innerHTML = `
+<div>${amount} ${from}</div>
+<div style="font-size:18px;margin:10px 0;">⬇️</div>
+<div>${total} ${to}</div>
+`;
+
+document.getElementById("rate").textContent =
+`1 ${from} = ${rate.toFixed(4)} ${to}`;
+
+updated.textContent =
+"آخر تحديث: " +
+new Date(data.time_last_update_utc).toLocaleString("ar-EG");
 
     updated.textContent =
         "آخر تحديث: " +
