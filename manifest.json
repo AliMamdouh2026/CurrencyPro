@@ -3,12 +3,12 @@
   "short_name": "CurrencyPro",
   "description": "Live Currency Converter",
   "start_url": "./",
+  "scope": "./",
   "display": "standalone",
+  "orientation": "portrait",
   "background_color": "#2563eb",
   "theme_color": "#2563eb",
-  "orientation": "portrait",
   "lang": "ar",
-  "dir": "rtl",
   "icons": [
     {
       "src": "assets/icon-192.png",
