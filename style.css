@@ -133,3 +133,30 @@ font-size:28px;
 }
 
 }
+.result-card{
+margin-top:25px;
+padding:20px;
+border-radius:16px;
+background:#f8f9ff;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.result-main{
+font-size:30px;
+font-weight:bold;
+color:#2563eb;
+line-height:1.6;
+}
+
+.rate-text{
+margin-top:12px;
+font-size:18px;
+color:#444;
+}
+
+.updated-text{
+margin-top:10px;
+font-size:14px;
+color:#777;
+}
