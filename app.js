@@ -67,9 +67,6 @@ updated.textContent =
 "آخر تحديث: " +
 new Date(data.time_last_update_utc).toLocaleString("ar-EG");
 
-    updated.textContent =
-        "آخر تحديث: " +
-        new Date(data.time_last_update_utc).toLocaleString();
 }
 
 // تبديل العملات
