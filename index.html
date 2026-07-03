@@ -1,21 +1,19 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" translate="no" class="notranslate">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CurrencyPro</title>
-    <!-- لون شريط المتصفح علوي متناسق -->
+    <meta name="google" content="notranslate">
     <meta name="theme-color" content="#2563eb">
     <meta name="description" content="CurrencyPro - Live Currency Converter">
     
-    <!-- ربط الملفات الخارجية -->
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
 </head>
 <body>
 
-    <div id="app">
-        <!-- الهيدر العلوي للتطبيق -->
+    <div id="app" translate="no" class="notranslate">
         <header class="header">
             <div class="header-top">
                 <h1>CurrencyPro</h1>
@@ -24,30 +22,25 @@
             <p class="header-subtitle">أسعار العملات لحظة بلحظة</p>
         </header>
 
-        <!-- المحتوى الرئيسي للتطبيق -->
         <main id="converter">
             <div class="card">
                 
-                <!-- خانة إدخال المبلغ -->
                 <div class="input-group">
                     <label for="amount">المبلغ المراد تحويله</label>
                     <input id="amount" type="number" placeholder="أدخل المبلغ هنا..." value="1" min="0">
                 </div>
 
-                <!-- قسم العملة المحول منها (From) -->
                 <div class="currency-section">
                     <label>من العملة</label>
                     <div class="search-box">
                         <input id="searchFrom" type="text" placeholder="ابحث باسم العملة أو رمزها...">
                     </div>
                     <div class="select-wrapper">
-                        <!-- مكان مخصص لعرض علم الدولة الحالي -->
                         <img id="flagFrom" src="https://flagsapi.com/SA/flat/64.png" alt="علم الدولة" class="currency-flag">
                         <select id="from"></select>
                     </div>
                 </div>
 
-                <!-- زر التبديل العصري الوسطي -->
                 <div class="swap-container">
                     <button id="swapBtn" type="button" title="تبديل العملات">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -61,20 +54,17 @@
                     </button>
                 </div>
 
-                <!-- قسم العملة المحول إليها (To) -->
                 <div class="currency-section">
                     <label>إلى العملة</label>
                     <div class="search-box">
                         <input id="searchTo" type="text" placeholder="ابحث باسم العملة أو رمزها...">
                     </div>
                     <div class="select-wrapper">
-                        <!-- مكان مخصص لعرض علم الدولة الثاني -->
                         <img id="flagTo" src="https://flagsapi.com/EG/flat/64.png" alt="علم الدولة" class="currency-flag">
                         <select id="to"></select>
                     </div>
                 </div>
 
-                <!-- كارد عرض النتيجة الاحترافي -->
                 <div id="resultCard" class="result-card">
                     <h3>نتيجة التحويل</h3>
                     <div id="result" class="result-main">--</div>
@@ -88,8 +78,7 @@
         </main>
     </div>
 
-    <!-- استدعاء ملفات الجافا سكربت بالترتيب الصحيح -->
-    <script src="currencies.js"></script>
-    <script src="app.js"></script>
+    <script src="currencies.js" translate="no"></script>
+    <script src="app.js" translate="no"></script>
 </body>
 </html>
