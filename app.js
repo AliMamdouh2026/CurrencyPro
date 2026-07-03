@@ -117,3 +117,33 @@ themeBtn.addEventListener("click", () => {
         themeBtn.textContent = "🌙 الوضع الليلي";
     }
 });
+const searchFrom = document.getElementById("searchFrom");
+const searchTo = document.getElementById("searchTo");
+
+function enableSearch(input, select) {
+  input.addEventListener("input", () => {
+    const q = input.value.trim().toUpperCase();
+
+    let firstMatch = null;
+
+    [...select.options].forEach(option => {
+      const match =
+        option.value.toUpperCase().includes(q) ||
+        option.text.toUpperCase().includes(q);
+
+      option.hidden = !match;
+
+      if (match && !firstMatch) {
+        firstMatch = option;
+      }
+    });
+
+    if (firstMatch) {
+      select.value = firstMatch.value;
+      convert();
+    }
+  });
+}
+
+enableSearch(searchFrom, fromSelect);
+enableSearch(searchTo, toSelect);
